@@ -1,0 +1,32 @@
+{
+  "name": "mentors",
+  "version": "1.0.0",
+  "description": "free social service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagininuel/mentors.git"
+  },
+  "keywords": [
+    "mentor",
+    "free"
+  ],
+  "author": "Sagini Emmanuel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sagininuel/mentors/issues"
+  },
+  "homepage": "https://github.com/sagininuel/mentors#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
