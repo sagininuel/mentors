@@ -12,7 +12,7 @@ export default {
       .isString()
       .withMessage('Firstname and lastname must be a string')
       .isLength({ min: 3 })
-      .withMessage('Firstname and lastname must be minimum of 3 characters'),
+      .withMessage('Firstname and lastname must be a minimum of 3 characters'),
     check('email')
       .isEmail()
       .withMessage('Please input a valid email address'),
