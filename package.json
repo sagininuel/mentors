@@ -4,14 +4,12 @@
     "description": "free social service",
     "main": "index.js",
     "scripts": {
-        "dev": "node_modules/.bin/nodemon ./api/src/index.js --exec babel-node --",
-        "start": "cross-env NODE_ENV=production babel-node -- ./api/src/index.js  ",
-        "build": "npm run clean && babel ./api -d ./api/dist",
-        "clean": "rm -rf api/dist",
         "test": "mocha ./api/test --require babel-register --recursive --timeout 50000 --exit",
         "lint": "./node_modules/.bin/eslint ./api --fix",
         "drop:create": "npm-run-all drop migrate",
         "coverage": "cross-env NODE_ENV=test npm run nyc -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
+        "dev": "node_modules/.bin/nodemon ./api/src/index.js --exec babel-node --",
+        "start": "babel-node -- ./api/src/index.js  ",
         "nyc": "nyc --reporter=lcov --reporter=text mocha 'api/test/'  --require babel-core/register --recursive --timeout 50000 --exit"
     },
     "repository": {
@@ -29,12 +27,8 @@
     },
     "homepage": "https://github.com/sagininuel/mentors#readme",
     "dependencies": {
-        "babel-core": "^6.26.3",
-        "babel-node": "0.0.1-security",
-        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-cli": "^6.26.0",
         "babel-plugin-transform-regenerator": "^6.26.0",
-        "babel-polyfill": "^6.26.0",
-        "babel-preset-env": "^1.7.0",
         "babel-preset-es2015": "^6.24.1",
         "body-parser": "^1.19.0",
         "chai": "^4.2.0",
@@ -46,8 +40,10 @@
         "swagger-ui-express": "^4.0.7"
     },
     "devDependencies": {
-        "babel-cli": "^6.26.0",
-        "babel-eslint": "^10.0.3",
+        "babel-core": "^6.26.3",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
         "coveralls": "^3.0.6",
         "eslint": "^6.2.1",
         "eslint-config-airbnb-base": "^14.0.0",
