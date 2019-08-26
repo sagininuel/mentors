@@ -4,6 +4,7 @@
 /* eslint-disable no-console */
 import express from "express";
 import bodyParser from "body-parser";
+import { config } from "dotenv";
 import apiRoutes from "./routes/index";
 import errorHandler from "./middlewares/errorHandler";
 import swaggerDoc from "./swaggerDocs";
@@ -11,8 +12,10 @@ import swaggerDoc from "./swaggerDocs";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import "babel-polyfill";
 
+config();
+
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(
