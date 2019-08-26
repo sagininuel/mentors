@@ -1,6 +1,5 @@
 import { config } from 'dotenv';
 import user from '../models/user';
-import Authorization from '../middlewares/authorization';
 
 config();
 
@@ -22,8 +21,6 @@ class userController {
 
     if (!isTheUserRegistered) {
       const isUserRegistered = user.create(req.query, req.body);
-
-      const token = Authorization.generateToken(isUserRegistered);
 
       return res.status(201).send({
         status: res.statusCode,

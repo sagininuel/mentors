@@ -1,6 +1,7 @@
+/* eslint-disable no-console */
 // Object de-structuring
 
-class user {
+class User {
   /**
      * class constructor
      *
@@ -31,4 +32,4 @@ class user {
   }
 }
 
-export default new user();
+export default new User();
