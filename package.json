@@ -28,6 +28,7 @@
     "homepage": "https://github.com/sagininuel/mentors#readme",
     "dependencies": {
         "babel-core": "^6.26.3",
+        "babel-node": "0.0.1-security",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-plugin-transform-regenerator": "^6.26.0",
         "babel-polyfill": "^6.26.0",
