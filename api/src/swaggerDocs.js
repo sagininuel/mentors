@@ -1,12 +1,12 @@
 /* eslint-disable linebreak-style */
-const swaggerJSDoc = require('swagger-jsdoc');
-const swaggerUi = require('swagger-ui-express');
+import swaggerJSDoc from 'swagger-jsdoc';
+import swaggerUi from 'swagger-ui-express';
 
 const swaggerDefinition = {
   info: {
     title: 'Free Mentors',
     version: '1.0.0',
-    description: 'Free Mentors is a social initiative to provide free mentorship sessions.',
+    description: 'Free Mentors is a social initiative where accomplished professionals become role models to young people to provide free mentorship sessions.',
   },
 };
 
