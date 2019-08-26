@@ -16,7 +16,7 @@ Free Mentors is a social initiative where accomplished professionals become role
 
 - User can sign up.
 - User can sign in.
-- User can view all mentors
+- User can view all mentors.
 - User can view a specific mentor
 - User can create a mentorship session request with a mentor
 - Mentor can accept a session
