@@ -1,32 +1,49 @@
 {
-  "name": "mentors",
-  "version": "1.0.0",
-  "description": "free social service",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sagininuel/mentors.git"
-  },
-  "keywords": [
-    "mentor",
-    "free"
-  ],
-  "author": "Sagini Emmanuel",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sagininuel/mentors/issues"
-  },
-  "homepage": "https://github.com/sagininuel/mentors#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
-  }
+    "name": "mentors",
+    "version": "1.0.0",
+    "description": "free social service",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha ./api/test --require babel-register --recursive --timeout 50000 --exit",
+        "lint": "./node_modules/.bin/eslint ./api --fix",
+        "drop:create": "npm-run-all drop migrate",
+        "start": "node_modules/.bin/nodemon ./api/src/index.js --exec babel-node --"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sagininuel/mentors.git"
+    },
+    "keywords": [
+        "mentor",
+        "free"
+    ],
+    "author": "Sagini Emmanuel",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/sagininuel/mentors/issues"
+    },
+    "homepage": "https://github.com/sagininuel/mentors#readme",
+    "dependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-plugin-transform-regenerator": "^6.26.0",
+        "babel-preset-es2015": "^6.24.1",
+        "body-parser": "^1.19.0",
+        "chai": "^4.2.0",
+        "express": "^4.17.1",
+        "express-validator": "^6.1.1",
+        "supertest": "^4.0.2",
+        "swagger-jsdoc": "^3.4.0",
+        "swagger-ui-express": "^4.0.7"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "eslint": "^6.2.1",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-plugin-import": "^2.18.2",
+        "mocha": "^6.2.0",
+        "nodemon": "^1.19.1"
+    }
 }
